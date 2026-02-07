@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Guide | دليل الهندسة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-placeholder">شعارك هنا</div>
+        <h1>Engineering Guide</h1>
+        <div class="services">
+            <span>تصميم</span> • <span>دراسة</span> • <span>تنفيذ</span> • <span>إشراف</span> • <span>استشارات</span>
+        </div>
+        <div class="experience-badge">خبرة تزيد عن 40 عاماً</div>
+    </header>
+
+    <div class="container">
+        <div class="chat-section">
+            <label for="userQuery">اكتب طلبك أو استفسارك الهندسي:</label>
+            <textarea id="userQuery" placeholder="مثال: أريد استشارة حول تصميم فيلا سكنية..."></textarea>
+            <button onclick="sendQuery()">إرسال الطلب</button>
+
+            <div class="response-area">
+                <span class="response-label">رد المستشار المهندس:</span>
+                <div id="answerField">بانتظار استفسارك.. سيظهر الرد هنا فوراً.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendQuery() {
+            const query = document.getElementById('userQuery').value;
+            const answerField = document.getElementById('answerField');
+            
+            if(query.trim() === "") {
+                alert("يرجى كتابة السؤال أولاً");
+                return;
+            }
+
+            answerField.innerHTML = "جاري معالجة طلبك...<br>شكراً لتواصلك مع Engineering Guide، سيقوم أحد مهندسينا بالرد عليك قريباً.";
+        }
+    </script>
+
+</body>
+</html>

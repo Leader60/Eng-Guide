@@ -1,0 +1,118 @@
+:root {
+    --primary-blue: #0a192f; /* كحلي غامق */
+    --accent-gold: #c5a059; /* لون ذهبي للتمييز */
+    --white: #ffffff;
+    --light-blue: #112240;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #0d2546 0%, #0a192f 100%);
+}
+
+.logo-placeholder {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+
+h1 { 
+    margin: 10px 0; 
+    font-size: 2.5rem; 
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.experience-badge {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* منطقة التفاعل */
+.chat-section {
+    background-color: var(--light-blue);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #233554;
+    background-color: #1d2d50;
+    color: white;
+    resize: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e2b765;
+    transform: translateY(-2px);
+}
+
+.response-area {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-right: 4px solid var(--accent-gold);
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+.response-label {
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: block;
+}
