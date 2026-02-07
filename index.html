@@ -30,19 +30,8 @@
         </div>
     </div>
 
-    <script>
-        function sendQuery() {
-            const query = document.getElementById('userQuery').value;
-            const answerField = document.getElementById('answerField');
-            
-            if(query.trim() === "") {
-                alert("يرجى كتابة السؤال أولاً");
-                return;
-            }
+       <script src="script.js"></script>
 
-            answerField.innerHTML = "جاري معالجة طلبك...<br>شكراً لتواصلك مع Engineering Guide، سيقوم أحد مهندسينا بالرد عليك قريباً.";
-        }
-    </script>
     <script src="https://sdk.minepi.com/pi-sdk.js"></script>
     <script>
         Pi.init({ version: "2.0", sandbox: true });
@@ -51,6 +40,7 @@
 </body>
 
 </html>
+
 
 
 
