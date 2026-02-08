@@ -46,29 +46,29 @@
             </div>
 
             <div class="contact-form">
-                <form id="contactForm" onsubmit="event.preventDefault(); alert('شكراً لتواصلك معنا. تم استلام رسالتك وسنقوم بالرد عليك في أقرب وقت ممكن.'); this.reset();">
+                <form action="https://formspree.io/f/mzdabogg" method="POST">
                     <div class="form-group">
                         <label>الاسم من فضلك</label>
-                        <input type="text" placeholder="اكتب الاسم هنا" required>
+                        <input type="text" name="الاسم" placeholder="اكتب الاسم هنا" required>
                     </div>
                     <div class="form-group">
                         <label>رقم الجوال</label>
-                        <input type="tel" placeholder="00965..." required>
+                        <input type="tel" name="الهاتف" placeholder="00965..." required>
                     </div>
                     <div class="form-group">
                         <label>نوع الخدمة المطلوبة</label>
-                        <select>
-                            <option>تصميم معماري</option>
-                            <option>دراسات إنشائية</option>
-                            <option>دراسات كهربائية</option>
-                            <option>دراسات بيئية</option>
-                            <option>إشراف وتنفيذ</option>
-                            <option>استشارة هندسية</option>
+                        <select name="نوع الخدمة">
+                            <option value="تصميم معماري">تصميم معماري</option>
+                            <option value="دراسات إنشائية">دراسات إنشائية</option>
+                            <option value="دراسات كهربائية">دراسات كهربائية</option>
+                            <option value="دراسات بيئية">دراسات بيئية</option>
+                            <option value="إشراف وتنفيذ">إشراف وتنفيذ</option>
+                            <option value="استشارة هندسية">استشارة هندسية</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>رسالتكم</label>
-                        <textarea rows="5" placeholder="كيف يمكننا مساعدتكم؟"></textarea>
+                        <textarea name="الرسالة" rows="5" placeholder="كيف يمكننا مساعدتكم؟"></textarea>
                     </div>
                     <button type="submit" class="submit-btn">إرسال الرسالة</button>
                 </form>
@@ -77,3 +77,4 @@
     </div>
 </body>
 </html>
+
