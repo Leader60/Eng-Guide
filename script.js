@@ -55,7 +55,7 @@ async function askQuestion() {
 function renderFinalResponse(name, email, mainText) {
     const responseField = document.getElementById('answerField');
     responseField.innerHTML = `
-        <div style="color: #2e7d32; font-weight: bold; margin-bottom: 15px;">✅ تم اسـتلام طلبكم بنجاح سـيد/ة ${name}</div>
+        <div style="color: #2e7d32; font-weight: bold; margin-bottom: 15px;">✅تم اسـتلام طلبكم بنجاح سـيد(ة)/ ${name}</div>
         <div style="text-align: center; border: 1px dashed #ccc; padding: 15px; background: #fafafa; margin-bottom: 15px; color: #333;">
             <strong>التحليل الأولي:</strong><br>${mainText}
         </div>
