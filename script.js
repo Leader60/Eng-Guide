@@ -25,7 +25,7 @@ async function askQuestion() {
                 "X-Title": "Engineering Guide"
             },
             body: JSON.stringify({
-                "model": "meta-llama/llama-3-8b-instruct:free",
+                "model": "deepseek/deepseek-r1:free",
                 "messages": [
                     {
                         "role": "system",
