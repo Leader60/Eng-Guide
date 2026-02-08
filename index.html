@@ -3,31 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Guide | الدليـل الهندســي</title>
+    <title>Engineering Guide | الدليل الهندسي</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="Engineering Guide Logo" class="app-logo-circular">
+    <img src="logo.png" alt="Logo" class="app-logo-circular">
     
     <h1>Engineering Guide</h1>
-    <h2 class="arabic-title">الدليـل الهنـدســي</h2> 
+    <h2 class="arabic-title">الدليـل الهندسـي</h2> 
     
-    <div class="services">
-        <span>تصميم</span>  |  <span>دراسـات</span>  |  <span>تنفيـذ</span>  |  <span>إشـراف</span>  |  <span>اسـتشارات هنـدسـية</span>  |  <span>من نحن</span>  |  <span>تواصـل معنـا</span>
-    </div>
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#">تصميم</a></li>
+            <li><a href="#">دراسات</a></li>
+            <li><a href="#">تنفيذ</a></li>
+            <li><a href="#">إشراف</a></li>
+            <li><a href="#">استشارات هندسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+        </ul>
+    </nav>
     
-    <div class="experience-badge">خبرة هنـدسـية تزيد عن 40 عاماً</div>
+    <div class="experience-badge">خبرة هندسية تزيد عن 40 عاماً</div>
 </header>
 
 <div class="container">
     <div class="chat-section">
         <div class="user-info-grid">
             <div class="info-field">
-                <label>الاسم الكامل</label>
-                <input type="text" id="userName" placeholder="من فضلك ... اكتب اسـمك هنا">
+                <label>الاسـم الكامـل</label>
+                <input type="text" id="userName" placeholder="من فضلك.. اكتب اسمك هنا">
             </div>
             <div class="info-field">
                 <label>البريد الإلكتروني</label>
@@ -35,14 +43,14 @@
             </div>
         </div>
 
-        <label for="userQuery">تفاصيل الاسـتشارة الهنـدسـية</label>
-        <textarea id="userQuery" rows="6" placeholder="من فضلكم كتابة كامل تفاصيل طلبكم هنا ليتم دراسته وتحليله بدقة..."></textarea>
+        <label for="userQuery" style="color: var(--gold); font-weight: bold; display: block; margin-bottom: 10px;">تفاصيل الاستشارة الهندسية</label>
+        <textarea id="userQuery" rows="6" placeholder="من فضلك كتابة كامل تفاصيل طلبكم هنا ليتم دراسـته وتحليـله بدقـة..."></textarea>
         
         <button onclick="askQuestion()">إرسـل الطلب من فضلك</button>
 
         <div class="response-area" id="responseContainer">
-            <span class="response-label" style="font-weight: bold; display: block; margin-bottom: 10px;">حالة الاسـتشارة:</span>
-            <div id="answerField">نحن بإنتظار وصول بياناتكم من أجل تدقيقها..</div>
+            <span class="response-label" style="font-weight: bold; display: block; margin-bottom: 10px;">حالة الاستشارة:</span>
+            <div id="answerField">نحن بانتظار اسـتلام بياناتكم ليتم المباشرة بالتدقيق والدراسـة..</div>
         </div>
     </div>
 </div>
@@ -50,11 +58,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
