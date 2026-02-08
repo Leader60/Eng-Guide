@@ -66,3 +66,13 @@ function renderFinalResponse(name, email, mainText) {
         </div>
     `;
 }
+
+// كود لتفعيل زر الإعجاب عند الضغط عليه
+document.querySelectorAll('.action-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        if (this.innerText.includes('إعجاب')) {
+            this.style.color = this.style.color === 'red' ? 'var(--gold)' : 'red';
+        }
+    });
+});
+
