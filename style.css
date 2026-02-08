@@ -1,3 +1,4 @@
+/* الألوان الأساسية للمشروع */
 :root {
     --navy-dark: #0a192f;
     --navy-light: #172a45;
@@ -8,10 +9,10 @@
     --header-bg: #f8f9fa;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
 }
 
 body {
@@ -22,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-/* الشريط الذهبي العلوي */
+/* الشريط العلوي الذهبي */
 body::before {
     content: "";
     display: block;
@@ -34,60 +35,75 @@ body::before {
     z-index: 1000;
 }
 
-/* الهيدر وتنسيق الشعار */
 header {
     background-color: var(--header-bg);
     color: var(--text-dark);
-    padding: 30px 20px 70px 20px; /* زيادة الحشو السفلي للرفع */
+    padding: 40px 20px 80px 20px; /* زيادة الحشو لتناسب حجم الشعار الجديد */
     text-align: center;
     border-bottom: 4px solid var(--gold);
     position: relative;
 }
 
+/* الشعار الدائري بعد التكبير */
 .app-logo-circular {
     position: absolute;
-    right: 30px;
-    top: 25px;
-    width: 100px;
-    height: 100px;
-    border-radius: 70%;
-    border: 3px solid var(--gold);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    right: 40px; /* تحريك طفيف لليسار ليتناسب مع الحجم */
+    top: 20px;
+    width: 130px; /* الحجم الجديد */
+    height: 130px; /* الحجم الجديد */
+    border-radius: 50%;
+    border: 4px solid var(--gold);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     object-fit: cover;
     background-color: white;
+    z-index: 10;
 }
 
-header h1, header h2.arabic-title {
-    color: var(--text-dark);
+header h1 {
+    font-size: 2.2em;
+    color: var(--navy-dark);
     margin-bottom: 5px;
 }
 
+.arabic-title {
+    font-size: 1.8em;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
 .services {
-    color: var(--navy-light);
     font-weight: bold;
-    margin: 10px 0;
+    color: #555;
+    margin-bottom: 15px;
 }
 
 .experience-badge {
-    background: var(--gold);
-    color: var(--text-dark);
-    padding: 5px 15px;
-    border-radius: 20px;
+    background-color: var(--navy-dark);
+    color: var(--gold);
     display: inline-block;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.9em;
     font-weight: bold;
-    margin-top: 10px;
 }
 
-/* الحاوية الرئيسية مع رفع المنسوب */
+/* حاوية المحتوى الرئيسي */
 .container {
     max-width: 850px;
-    margin: -50px auto 30px auto; /* رفع الصفحة للأعلى بمقدار 50px */
+    margin: -50px auto 30px auto;
     padding: 0 20px;
     position: relative;
     z-index: 20;
 }
 
-/* تنسيق الخانات والشبكة */
+.chat-section {
+    background: var(--navy-light);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
 .user-info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -95,79 +111,88 @@ header h1, header h2.arabic-title {
     margin-bottom: 15px;
 }
 
-label {
+.info-field label {
     display: block;
     margin-bottom: 8px;
     color: var(--gold);
     font-weight: bold;
-    text-align: center;
 }
 
-input[type="text"], 
-input[type="email"], 
-textarea {
+input, textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid var(--navy-light);
+    border: 2px solid #2a3d5a;
     border-radius: 10px;
-    background-color: var(--white);
-    color: var(--text-dark);
-    text-align: center; /* توسيط النص أفقياً */
+    background: #0a192f;
+    color: white;
+    text-align: center;
     font-family: 'Cairo', sans-serif;
-    transition: all 0.3s ease;
+    font-size: 1em;
 }
 
-input:hover, textarea:hover {
-    color: var(--gold);
+input:focus, textarea:focus {
     border-color: var(--gold);
+    outline: none;
 }
 
 button {
     width: 100%;
-    padding: 15px;
+    padding: 18px;
     background-color: var(--gold);
-    color: var(--text-dark);
+    color: var(--navy-dark);
     border: none;
     border-radius: 10px;
-    font-size: 1.1em;
     font-weight: bold;
+    font-size: 1.1em;
     cursor: pointer;
     margin-top: 15px;
-    transition: 0.3s;
+    transition: background 0.3s ease;
 }
 
 button:hover {
     background-color: var(--gold-hover);
-    transform: translateY(-2px);
 }
 
+/* منطقة الردود */
 .response-area {
     margin-top: 25px;
     padding: 25px;
     background-color: var(--white);
-    border: 3px solid var(--navy-light);
     border-radius: 12px;
     color: var(--text-dark);
-    text-align: center;
+    text-align: right; /* محاذاة النص لليمين للغة العربية */
+    border-top: 5px solid var(--gold);
 }
 
 .audit-notice {
     margin-top: 15px;
-    padding: 10px;
+    padding: 15px;
     background: #fff9e6;
     border-radius: 8px;
     font-size: 0.9em;
-    color: #856404;
-    border-right: 4px solid var(--gold);
+    border-right: 5px solid var(--gold);
+    color: #444;
 }
 
+/* توافق الشاشات الصغيرة (الجوال) */
 @media (max-width: 768px) {
-    .app-logo-circular {
-        position: static;
-        margin: 0 auto 15px auto;
-        display: block;
+    header {
+        padding-top: 20px;
     }
-    .container { margin-top: 10px; }
-    .user-info-grid { grid-template-columns: 1fr; }
+    
+    .app-logo-circular { 
+        position: static; 
+        margin: 0 auto 15px auto; 
+        display: block;
+        width: 110px; /* حجم أصغر قليلاً للجوال */
+        height: 110px;
+    }
+    
+    .container { 
+        margin-top: 10px; 
+    }
+    
+    .user-info-grid { 
+        grid-template-columns: 1fr; 
+    }
 }
-
