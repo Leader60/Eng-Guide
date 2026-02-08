@@ -4,47 +4,63 @@ async function askQuestion() {
     const query = document.getElementById('userQuery').value;
     const responseField = document.getElementById('answerField');
 
+    // 1. التأكد من ملء البيانات
     if (!name.trim() || !email.trim() || !query.trim()) {
-        responseField.innerHTML = "<span style='color: #d44c4c;'>⚠️ يرجى تعبئة كافة الحقول (الاسم، البريد، السؤال).</span>";
+        responseField.innerHTML = "<span style='color: #d44c4c;'>⚠️ من فضلك تعبئة كافة الحقول (الاسم، البريد، السؤال).</span>";
         return;
     }
 
-    responseField.innerHTML = "جاري تحليل طلبكم ودراسته لإعداد الرد الأولي... 🏗️";
+    responseField.innerHTML = "جاري معالجة الطلب وإرساله للمهندس المختص... 🏗️";
 
     try {
+        // 2. إرسال نسخة لبريدك عبر Formspree (خلف الكواليس)
+        fetch("https://formspree.io/f/mzdabogg", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                "اسم العميل": name,
+                "البريد الإلكتروني": email,
+                "تفاصيل الاستشارة": query
+            })
+        });
+
+        // 3. إرسال الاستفسار للذكاء الاصطناعي للرد الفوري
         const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer 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",
-                "Content-Type": "application/json",
-                "HTTP-Referer": "https://leader60.github.io/Engineering-Guide",
-                "X-Title": "Engineering Guide"
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 "model": "deepseek/deepseek-chat:free",
                 "messages": [
-                    { "role": "system", "content": "أنت مهندس خبير. أجب باحترافية باللغة العربية." },
+                    { "role": "system", "content": "أنت مهندس خبير بمؤهلات عالية. أجب بدقة واحترافية باللغة العربية." },
                     { "role": "user", "content": query }
                 ]
             })
         });
 
         const data = await response.json();
-        let aiReply = (data.choices && data.choices[0]) ? data.choices[0].message.content : "يوجد ضغط كبير على الموقع حالياً، سننقل طلبكم مباشرة إلى قسم الخبراء.";
+        let aiReply = (data.choices && data.choices[0]) ? data.choices[0].message.content : "تم استلام طلبك بنجاح، وسيقوم المهندس بالرد عليك مباشرة.";
 
+        // 4. عرض النتيجة النهائية في الموقع
         responseField.innerHTML = `
-            <div style="color: #2e7d32; font-weight: bold; margin-bottom: 15px;">✅ تم استلام طلبك بنجاح يا ${name}</div>
-            <div style="text-align: center; border: 1px dashed #ccc; padding: 15px; background: #fafafa; margin-bottom: 15px;">
+            <div style="color: #2e7d32; font-weight: bold; margin-bottom: 15px;">✅ تم اسـتلام طلبك بنجاح يا سـيد/ة ${name}</div>
+            <div style="text-align: center; border: 1px dashed #ccc; padding: 15px; background: #fafafa; margin-bottom: 15px; color: #333;">
                 <strong>التحليل الأولي المبدئي:</strong><br>${aiReply}
             </div>
             <div class="audit-notice">
-                <strong>📝 إشعار التدقيق:</strong><br>
-                يتم الآن مراجعة هذه النتائج من قبل فريقنا الهندسي المعتمد. 
-                <br>سيصلك التقرير النهائي المدقق إلى عنوان بريدك الإلكتروني: <strong>(${email})</strong> في أقرب وقت ممكن.
+                <strong>📝 إشعار التدقيق البشري:</strong><br>
+                لقد تم استلام طلبك من قبل المكتب الاستشاري في مكاتبنا. يقوم فريق الخبراء بمراجعة البيانات لضمان دقتها.
+                <br>سيصلك التقرير النهائي المدقق على عنوان بريدك الإلكتروني: <strong>(${email})</strong> في أقرب وقت ممكن.
             </div>
         `;
 
     } catch (error) {
-        responseField.innerHTML = "المعذرة حدث خطأ غير متوقع. لقد تم تسجيل طلبكم وسنتواصل معكم عبر البريد الإلكتروني.";
+        console.error("Error:", error);
+        responseField.innerHTML = "تم إرسال طلبك للمهندس المختص بنجاح، وسنتواصل معك عبر عنوان البريد الإلكتروني قريباً.";
     }
 }
