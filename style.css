@@ -283,3 +283,58 @@ button:hover {
     }
 }
 
+/* --- إضافة تنسيق القائمة الرئيسية --- */
+.main-menu {
+    margin: 20px 0;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.main-menu ul {
+    list-style: none; /* حذف النقاط */
+    padding: 0;
+    display: flex; /* السحر الذي يحول القائمة من عمودية لأفقية */
+    flex-direction: row; 
+    justify-content: center; /* وضعها في منتصف الصفحة */
+    flex-wrap: wrap; /* لجعلها متناسقة على الجوال */
+    gap: 15px; /* المسافة بين الكلمات */
+}
+
+.main-menu ul li {
+    display: flex;
+    align-items: center;
+}
+
+/* إضافة الفاصل العمودي | بين الكلمات */
+.main-menu ul li:not(:last-child)::after {
+    content: "|";
+    margin-right: 15px;
+    color: var(--navy-dark);
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.main-menu ul li a {
+    color: var(--navy-dark);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.main-menu ul li a:hover {
+    color: var(--gold);
+}
+
+/* تعديل بسيط للجوال */
+@media (max-width: 768px) {
+    .main-menu ul {
+        gap: 8px;
+    }
+    .main-menu ul li a {
+        font-size: 0.9em;
+    }
+}
+
+
