@@ -46,7 +46,7 @@ async function askQuestion() {
             responseDiv.innerText = aiReply;
         } else {
             console.error("OpenRouter Error:", data);
-            responseDiv.innerText = "عذراً، النموذج المجاني مشغول حالياً. حاول مرة أخرى بعد قليل.";
+            responseDiv.innerText = " عذراً، يوجد ضغط كبير على الموقع حالياً.  حاول مرة أخرى بعد قليل من فضلك.";
         }
 
     } catch (error) {
