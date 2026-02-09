@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -239,7 +238,49 @@
     <p>© 2026 جميع الحقوق محفوظة لمكتب Engineering Guide</p>
     <a href="privacy.html" style="color: var(--gold); margin-left: 15px;">سياسة الخصوصية</a>
     <a href="disclaimer.html" style="color: var(--gold);">إخلاء المسؤولية</a>
-</footer>     
+</footer>
+  <div class="side-social-bar" style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 15px; z-index: 1000;">
+    
+    <button onclick="toggleLikeSide()" id="sideLikeBtn" style="background: white; border: 2px solid #d4af37; color: #d4af37; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;">
+        <i class="far fa-heart" id="sideHeartIcon"></i>
+    </button>
+
+    <a href="https://wa.me/96560986551" target="_blank" style="background: #25d366; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;">
+        <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+    </a>
+
+    <button onclick="shareWebsite()" style="background: #001f3f; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;">
+        <i class="fas fa-share-alt"></i>
+    </button>
+</div>
+
+<script>
+    function toggleLikeSide() {
+        const icon = document.getElementById('sideHeartIcon');
+        const btn = document.getElementById('sideLikeBtn');
+        icon.classList.toggle('fas');
+        icon.classList.toggle('far');
+        if(icon.classList.contains('fas')) {
+            icon.style.color = '#e74c3c';
+            btn.style.borderColor = '#e74c3c';
+        } else {
+            icon.style.color = '#d4af37';
+            btn.style.borderColor = '#d4af37';
+        }
+    }
+
+    function shareWebsite() {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Engineering Guide',
+                text: 'اطلع على خدمات مكتب Engineering Guide للاستشارات الهندسية في الكويت',
+                url: window.location.href
+            });
+        } else {
+            alert('انسخ الرابط لمشاركته مع أصدقائك: ' + window.location.href);
+        }
+    }
+</script>     
 </body>
 </html>
 
