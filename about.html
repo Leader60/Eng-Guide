@@ -239,21 +239,31 @@
     <a href="privacy.html" style="color: var(--gold); margin-left: 15px;">سياسة الخصوصية</a>
     <a href="disclaimer.html" style="color: var(--gold);">إخلاء المسؤولية</a>
 </footer>
-  <div class="side-social-bar" style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 15px; z-index: 1000;">
+ <div class="side-social-bar" style="
+    position: fixed; 
+    left: calc(50% + 610px); /* تعتمد على المنتصف لضمان الدقة */
+    top: 50%; 
+    transform: translateY(-50%); 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    z-index: 9999;
+    margin: 0; 
+    padding: 0;
+">
     
-    <button onclick="toggleLikeSide()" id="sideLikeBtn" style="background: white; border: 2px solid #d4af37; color: #d4af37; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;">
+    <button onclick="toggleLikeSide()" id="sideLikeBtn" style="background: white; border: 2px solid #d4af37; color: #d4af37; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
         <i class="far fa-heart" id="sideHeartIcon"></i>
     </button>
 
-    <a href="https://wa.me/96560986551" target="_blank" style="background: #25d366; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;">
-        <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+    <a href="https://wa.me/96560896551" target="_blank" style="background: #25d366; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+        <i class="fab fa-whatsapp" style="font-size: 22px;"></i>
     </a>
 
-    <button onclick="shareWebsite()" style="background: #001f3f; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;">
+    <button onclick="shareWebsite()" style="background: #001f3f; color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
         <i class="fas fa-share-alt"></i>
     </button>
 </div>
-
 <script>
     function toggleLikeSide() {
         const icon = document.getElementById('sideHeartIcon');
@@ -273,7 +283,7 @@
         if (navigator.share) {
             navigator.share({
                 title: 'Engineering Guide',
-                text: 'اطلع على خدمات مكتب Engineering Guide للاستشارات الهندسية في الكويت',
+                text: 'اطلع على خدمات موقعنا Engineering Guide للاستشارات الهندسية ',
                 url: window.location.href
             });
         } else {
