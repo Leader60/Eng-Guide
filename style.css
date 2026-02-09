@@ -25,16 +25,24 @@ body {
 }
 
 /* 2. الحاوية الكحلية - نستخدم margin: auto لتوسيطها بدلاً من الـ flex */
-.page-wrapper {
+.page-wrapper .page-wrapper {
     width: 100%;
-    max-width: 1100px; /* العرض المطلوب */
-    margin: 0 auto;    /* هذا السطر سيقوم بتوسيط الموقع بأمان */
-    background-color: #001f3f; /* اللون الكحلي الخاص بك */
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #001f3f; /* الكحلي */
     min-height: 100vh;
-    box-shadow: 0 0 25px rgba(0,0,0,0.2);
     position: relative;
-    color: white;
-    direction: rtl; /* لضمان اتجاه الكتابة الصحيح */
+    direction: rtl;
+    
+    /* إضافة الشريط الذهبي على الجوانب */
+    border-right: 5px solid #d4af37; /* شريط ذهبي أيمن */
+    border-left: 5px solid #d4af37;  /* شريط ذهبي أيسر */
+    
+    /* تعديل الظل ليكون متناسقاً مع الذهب */
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); 
+    
+    /* نضمن أن الحدود لا تزيد من عرض الـ 1100px */
+    box-sizing: border-box; 
 }
 
 /* الشريط العلوي الذهبي */
@@ -549,6 +557,7 @@ button:hover {
     }
 }
 </style>
+
 
 
 
