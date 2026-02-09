@@ -58,38 +58,12 @@ body::before {
 }
 
 header {
-    background-color: var(--header-bg);
-    padding: 20px;
+   background-color: var(--header-bg);
+    color: var(--text-dark);
+    padding: 40px 20px 80px 20px; /* زيادة الحشو لتناسب حجم الشعار الجديد */
+    text-align: center;
     border-bottom: 4px solid var(--gold);
     position: relative;
-    min-height: 80px; /* لضمان وجود مساحة كافية */
-    display: block; /* نلغي الـ flex الذي سبب المشكلة */
-    direction: rtl;
-}
-
-/* دفع القائمة لليمين */
-.nav-links {
-    float: right;
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-/* دفع اسم الموقع لليسار */
-.logo-text {
-    float: left;
-    font-weight: bold;
-    color: var(--gold);
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-/* تنظيف الطفو لكي لا يؤثر على ما تحته */
-header::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 /* الشعار الدائري بعد التكبير */
@@ -583,6 +557,7 @@ button:hover {
     }
 }
 </style>
+
 
 
 
