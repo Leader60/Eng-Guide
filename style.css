@@ -517,4 +517,23 @@ button:hover {
     }
 }
 
+/* تنسيق خاص للهواتف فقط */
+@media (max-width: 768px) {
+    .side-social-bar {
+        /* نقل الأزرار من اليمين إلى الأسفل قليلاً أو تثبيتها في زاوية ضيقة */
+        left: auto !important; /* إلغاء خاصية left التي استخدمناها للكمبيوتر */
+        right: 10px !important; /* لصقها قريباً من الحافة اليمنى */
+        top: auto !important;   /* إلغاء التوسط العمودي */
+        bottom: 20px !important; /* وضعها في أسفل الشاشة لسهولة الضغط بالإبهام */
+        transform: none !important;
+        gap: 10px !important;   /* تقليل المسافات بين الأزرار */
+    }
+
+    .side-social-bar button, .side-social-bar a {
+        width: 40px !important;  /* تصغير الحجم قليلاً ليناسب الشاشة */
+        height: 40px !important;
+    }
+}
+</style>
+
 
