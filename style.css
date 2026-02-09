@@ -581,41 +581,5 @@ header nav {
     list-style: none;
 }
 
-/* الحاوية التي تضمن المحاذاة الشاقولية */
-.experience-wrapper {
-    display: flex;
-    justify-content: center; /* التوسط الأفقي */
-    align-items: center;     /* المحاذاة الشاقولية في المنتصف تماماً */
-    gap: 15px;               /* المسافة بين الصورة والصندوق */
-    margin: 15px auto;       /* تقليل المسافة الكلية كما طلبت سابقاً */
-}
-
-/* تنسيق الصور الشخصية */
-.badge-photo {
-    width: 55px;             /* حجم متناسق مع ارتفاع الصندوق */
-    height: 55px;
-    border-radius: 50%;      /* دائرية مثل الشعار */
-    border: 2px solid var(--gold); /* إطار ذهبي لتوحيد الهوية البصرية */
-    object-fit: cover;       /* لعدم تشويه ملامح الصورة */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* تعديل الصندوق ليعمل مع نظام Flex الجديد */
-.experience-badge {
-    margin: 0 !important;    /* إلغاء الهوامش السابقة لأن الحاوية تديرها */
-    white-space: nowrap;     /* منع انقسام النص لسطرين */
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
