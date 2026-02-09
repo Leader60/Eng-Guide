@@ -59,25 +59,37 @@ body::before {
 
 header {
     background-color: var(--header-bg);
-    color: var(--text-dark);
-    padding: 15px 30px; /* تقليل الحشو ليتناسب مع التوزيع العرضي */
+    padding: 20px;
     border-bottom: 4px solid var(--gold);
     position: relative;
-    
-    /* هذا هو الجزء السحري للتوزيع */
-    display: flex;
-    justify-content: space-between; /* يدفع القائمة لليمين والكلمة لليسار */
-    align-items: center; /* يوازنهم في المنتصف شاقولياً */
-    direction: rtl; /* لضمان أن اليمين هو نقطة البداية */
+    min-height: 80px; /* لضمان وجود مساحة كافية */
+    display: block; /* نلغي الـ flex الذي سبب المشكلة */
+    direction: rtl;
 }
 
-/* تنسيق القائمة لضمان ظهورها بشكل أفقي مرتب */
+/* دفع القائمة لليمين */
 .nav-links {
+    float: right;
     display: flex;
     list-style: none;
-    gap: 15px; /* المسافة بين روابط القائمة */
-    margin: 0;
-    padding: 0;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* دفع اسم الموقع لليسار */
+.logo-text {
+    float: left;
+    font-weight: bold;
+    color: var(--gold);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* تنظيف الطفو لكي لا يؤثر على ما تحته */
+header::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* الشعار الدائري بعد التكبير */
@@ -571,6 +583,7 @@ button:hover {
     }
 }
 </style>
+
 
 
 
