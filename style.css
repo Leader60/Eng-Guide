@@ -104,7 +104,7 @@ header h1 {
     color: var(--gold);
     display: inline-block;
     padding: 20px 80px;
-    border-radius: 12px;
+    border-radius: 15px;
     font-size: 1.4em;
     font-weight: bold;
 }
@@ -580,6 +580,7 @@ header nav {
     gap: 20px;
     list-style: none;
 }
+
 
 
 
