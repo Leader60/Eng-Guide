@@ -603,5 +603,34 @@ header nav {
     right: 5%;            /* مسافة بسيطة من حافة الصفحة اليمنى */
 }
 
+/* هذا الكود يطبق فقط على الشاشات الأصغر من 768 بكسل (الموبايلات) */
+@media (max-width: 768px) {
+    
+    /* 1. تصغير كلمة Engineering Guide لكي لا تدفع الصفحة */
+    .logo-text { 
+        font-size: 1.2rem !important; /* تصغير حجم الخط */
+        white-space: nowrap;          /* منع النص من الانكسار */
+        overflow: hidden;             /* إخفاء أي جزء زائد */
+        text-overflow: ellipsis;      /* إضافة نقاط (...) إذا كان النص طويلاً جداً */
+    }
+
+    /* 2. منع الصفحة كاملة من التحرك يميناً ويساراً */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100%;
+        position: relative;
+    }
+
+    /* 3. ضبط الصور الجانبية (التي أضفناها) لكي لا تخرج من الشاشة */
+    .header-side-photo {
+        width: 45px;  /* تصغير الصور على الموبايل */
+        height: 45px;
+        bottom: 10px; /* رفعها قليلاً لتناسب صغر الهيدر */
+    }
+    
+    .left-edge { left: 5px; }
+    .right-edge { right: 5px; }
+}
+
 
 
