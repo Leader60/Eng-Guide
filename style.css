@@ -656,8 +656,8 @@ header nav {
  /* تنسيق صفحة History */
 /* --- تنسيقات صفحة التطور العلمي --- */
 :root {
-    --gold: #d4af37;
-    --dark-blue: #2a3d5a;
+    --gold: #ffcf40;
+    --dark-blue: #f1f1f1;
 }
 
 .science-container {
@@ -679,9 +679,10 @@ header nav {
 
 .intro-text {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    max-width: 800px;
     margin-bottom: 40px;
-    color: #444;
+    color: var(--soft-white);
 }
 
 /* شبكة الصناديق */
@@ -714,7 +715,7 @@ header nav {
 
 .info-card h3 {
     padding: 15px;
-    color: var(--dark-blue);
+    color: #2a3d5a;
     font-size: 1.2rem;
 }
 
@@ -726,7 +727,7 @@ header nav {
 
 /* الفيديو */
 .video-section {
-    background: var(--dark-blue);
+    background: var(--bright-gold);
     padding: 40px;
     border-radius: 20px;
     color: white;
@@ -787,6 +788,7 @@ header nav {
     .video-wrapper iframe { height: 250px; }
     .page-title { font-size: 1.4rem; }
 }
+
 
 
 
