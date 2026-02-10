@@ -603,33 +603,41 @@ header nav {
     right: 5%;            /* مسافة بسيطة من حافة الصفحة اليمنى */
 }
 
-/* هذا الكود يطبق فقط على الشاشات الأصغر من 768 بكسل (الموبايلات) */
+/* الكود الشامل لتصغير كل عناصر الهيدر على الموبايل */
 @media (max-width: 768px) {
-    
-    /* 1. تصغير كلمة Engineering Guide لكي لا تدفع الصفحة */
-    .logo-text { 
-        font-size: 1.2rem !important; /* تصغير حجم الخط */
-        white-space: nowrap;          /* منع النص من الانكسار */
-        overflow: hidden;             /* إخفاء أي جزء زائد */
-        text-overflow: ellipsis;      /* إضافة نقاط (...) إذا كان النص طويلاً جداً */
+    /* 1. اسم الموقع */
+    .logo-text, .brand-name, header h1 { 
+        font-size: 1rem !important; 
     }
 
-    /* 2. منع الصفحة كاملة من التحرك يميناً ويساراً */
-    html, body {
-        overflow-x: hidden !important;
-        width: 100%;
-        position: relative;
+    /* 2. القائمة الرئيسية (الروابط) */
+    nav ul {
+        padding: 0 !important;
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* تقليل المسافة بين الأزرار */
     }
 
-    /* 3. ضبط الصور الجانبية (التي أضفناها) لكي لا تخرج من الشاشة */
+    nav ul li a {
+        font-size: 0.8rem !important; /* تصغير حجم خط الأزرار */
+        padding: 5px 8px !important;
+    }
+
+    /* 3. صندوق الخبرة */
+    .experience-badge {
+        font-size: 0.85rem !important; 
+        padding: 8px 15px !important; 
+        margin: 20px auto !important; /* الحفاظ على التوسط والمسافة */
+        width: 80% !important; 
+        display: block !important;
+    }
+
+    /* 4. الصور الجانبية */
     .header-side-photo {
-        width: 45px;  /* تصغير الصور على الموبايل */
-        height: 45px;
-        bottom: 10px; /* رفعها قليلاً لتناسب صغر الهيدر */
+        width: 35px !important;
+        height: 35px !important;
+        bottom: 15px !important; /* محاذاة الصور مع الصندوق الصغير */
     }
-    
-    .left-edge { left: 5px; }
-    .right-edge { right: 5px; }
 }
 
 
