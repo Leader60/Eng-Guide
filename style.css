@@ -790,5 +790,33 @@ header nav {
 }
 
 
+/* ضبط محاذاة النصوص */
+/* تنسيق محتوى المقال الداخلي */
+.article-content {
+    text-align: right; /* محاذاة لليمين */
+    line-height: 1.8;  /* مسافة مريحة بين الأسطر للقراءة */
+    color: #222;       /* لون خط أغمق للوضوح */
+    max-width: 900px;  /* جعل عرض النص أقل قليلاً من عرض الصفحة لراحة العين */
+    margin: 0 auto;    /* توسيط حاوي النص */
+}
+
+.article-intro {
+    text-align: right;
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* ضبط الصور - حجم كامل متناسق */
+.main-article-image img {
+    width: 100%;       /* تأخذ عرض الحاوية بالكامل */
+    height: auto;      /* تجعل الارتفاع يتناسب تلقائياً مع العرض دون تشويه */
+    max-height: 500px; /* يمكنك تحديد أقصى ارتفاع لكي لا تغطي الشاشة كاملة */
+    object-fit: cover; /* لضمان ملء المساحة بشكل جمالي */
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 
 
