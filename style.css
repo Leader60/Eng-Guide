@@ -793,18 +793,43 @@ header nav {
 /* ضبط محاذاة النصوص */
 /* تنسيق محتوى المقال الداخلي */
 .article-content {
-    text-align: right; /* محاذاة لليمين */
-    line-height: 1.8;  /* مسافة مريحة بين الأسطر للقراءة */
-    color: #222;       /* لون خط أغمق للوضوح */
-    max-width: 900px;  /* جعل عرض النص أقل قليلاً من عرض الصفحة لراحة العين */
-    margin: 0 auto;    /* توسيط حاوي النص */
+    text-align: right;
+    line-height: 1.9;
+    color: #ffffff;      /* لون النص الأساسي أبيض ناصع */
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
 }
 
 .article-intro {
     text-align: right;
-    font-size: 1.2rem;
-    color: #444;
+    font-size: 1.3rem;
+    color: #d4af37;      /* اللون الذهبي للمقدمة لجذب الانتباه */
     margin-bottom: 30px;
+    font-weight: 500;
+    border-right: 4px solid #d4af37; /* لمسة هندسية: خط ذهبي جانبي */
+    padding-right: 15px;
+}
+
+/* تمييز العناوين الفرعية داخل المقال */
+.article-content h2, .article-content h3 {
+    color: #d4af37;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* تنسيق الروابط داخل المقال إن وجدت */
+.article-content a {
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+/* التأكد من أن العنوان الرئيسي ذهبي أيضاً */
+.page-title {
+    color: #d4af37;
+    text-align: right;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 /* ضبط الصور - حجم كامل متناسق */
@@ -814,9 +839,12 @@ header nav {
     max-height: 500px; /* يمكنك تحديد أقصى ارتفاع لكي لا تغطي الشاشة كاملة */
     object-fit: cover; /* لضمان ملء المساحة بشكل جمالي */
     border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.3); /* إطار ذهبي شفاف */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     margin: 20px 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
 
 
 
