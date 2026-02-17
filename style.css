@@ -832,17 +832,47 @@ header nav {
     margin-bottom: 20px;
 }
 
-/* ضبط الصور - حجم كامل متناسق */
-.main-article-image img {
-    width: 100%;       /* تأخذ عرض الحاوية بالكامل */
-    height: auto;      /* تجعل الارتفاع يتناسب تلقائياً مع العرض دون تشويه */
-    max-height: 500px; /* يمكنك تحديد أقصى ارتفاع لكي لا تغطي الشاشة كاملة */
-    object-fit: cover; /* لضمان ملء المساحة بشكل جمالي */
-    border-radius: 15px;
-    border: 1px solid rgba(212, 175, 55, 0.3); /* إطار ذهبي شفاف */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.engineering-gallery {
+  display: flex; /* هذا هو السر في جعلها أفقية */
+  gap: 15px; /* المسافة بين الصور */
+  padding: 20px 0;
+  width: 100%;
+  justify-content: space-between; /* توزيع الصور بانتظام */
+}
+
+.image-box {
+  flex: 1; /* لجعل الصور الثلاث متساوية في العرض */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-box img {
+  width: 100%;
+  height: 250px; /* يمكنك تعديل الارتفاع حسب الرغبة */
+  object-fit: cover; /* لضمان عدم تشوه الصورة */
+  display: block;
+}
+
+.image-box:hover {
+  transform: scale(1.03); /* تأثير زووم بسيط عند التمرير */
+}
+
+.img-caption {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* لجعل الصور تظهر تحت بعضها في الشاشات الصغيرة (الموبايل) */
+@media (max-width: 768px) {
+  .engineering-gallery {
+    flex-direction: column;
+  }
 }
 
 /* تنسيق قسم المراجع */
@@ -897,6 +927,7 @@ header nav {
         font-size: 0.8rem;
     }
 }
+
 
 
 
