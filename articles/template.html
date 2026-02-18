@@ -3,42 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عنوان المقال | Engineering Guide</title>
+    <title>Engineering Guide | الدليل الهندسي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <header style="background: #001f3f; border-bottom: 2px solid #d4af37; padding: 10px 0;">
-        <nav style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
-            <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
-                <li><a href="../index.html" style="color: white; text-decoration: none;">الرئيسية</a></li>
-                <li><a href="../history.html" style="color: #d4af37; text-decoration: none; font-weight: bold;">المعرض العلمي</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="science-container">
-        <h1 class="page-title">هنا يكتب عنوان المقال (مثلاً: تقنية BIM)</h1>
+    <div class="page-wrapper">
         
-        <div class="main-article-image">
-            <img src="../images/bim-large.jpg" alt="BIM Tech" style="width: 100%; border-radius: 15px;">
-        </div>
+        <header style="background: #001f3f; border-bottom: 2px solid #d4af37; padding: 10px 0; position: sticky; top: 0; z-index: 1000;">
+            <nav style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+                
+                <ul style="list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; direction: rtl;">
+                    <li><a href="../index.html" style="color: #ffffff; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#ffffff'">الرئيسية</a></li>
+                    <li><a href="../about.html" style="color: #ffffff; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#ffffff'">من نحن</a></li>
+                    <li><a href="index.html#services" style="color: #ffffff; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#ffffff'">خدماتنا</a></li>
+                    <li><a href="../history.html" style="color: #d4af37; text-decoration: none; font-weight: bold;">الأرشيف</a></li>
+                    <li><a href="../contact.html" style="background: #d4af37; color: #001f3f; padding: 6px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;">تواصل معنا</a></li>
+                </ul>
 
-        <article class="article-content">
-            <p class="article-text">
-                هنا تبدأ بكتابة الفقرة الأولى... ستلاحظ أنها أخذت تنسيق <strong>Medium</strong> تلقائياً لأننا ربطنا ملف CSS الرئيسي.
+                </nav>
+        </header>
+
+        <main class="science-container">
+    <h1 class="page-title" style="text-align: right;">عنوان المقال (BIM)</h1>
+    
+    <p class="article-intro">
+سطر يلخص المقال    </p>
+
+   <div class="engineering-gallery">
+  <div class="image-box">
+    <img src="../images/أسم الصورة" alt="عنوان الصورة">
+    <div class="img-caption">عنوان الصورة</div>
+  </div>
+  
+    <div class="engineering-gallery">
+  <div class="image-box">
+    <img src="../images/أسم الصورة" alt="عنوان الصورة">
+    <div class="img-caption">عنوان الصورة</div>
+  </div>
+  
+   <div class="engineering-gallery">
+  <div class="image-box">
+    <img src="../images/أسم الصورة" alt="عنوان الصورة">
+    <div class="img-caption">عنوان الصورة</div>
+  </div>
+
+    <div class="article-content">
+        <p>تُعدّ تقنية نمذجة معلومات البناء (Building Information Modeling – BIM) نقلة نوعية في عالم الهندسة المعمارية، إذ لم تعد عملية التصميم تقتصر على رسومات ثنائية الأبعاد، بل أصبحت تعتمد على نموذج رقمي ثلاثي الأبعاد غني بالمعلومات. هذا النموذج لا يعبّر فقط عن الشكل الهندسي للمبنى، بل يتضمن بيانات دقيقة حول المواد، والكميات، والتكلفة، والجدول الزمني، وأداء العناصر المختلفة خلال دورة حياة المشروع.
+في المجال المعماري، تمكّن تقنية BIM المهندس من تطوير تصور متكامل للمبنى منذ المراحل الأولى للتصميم، مع إمكانية اختبار الأفكار وتحليلها رقمياً قبل التنفيذ. كما تسهّل التنسيق بين مختلف التخصصات الهندسية (المعماري، الإنشائي، الميكانيكي، الكهربائي)، مما يقلل من التعارضات والأخطاء في الموقع ويحدّ من الهدر في الوقت والتكلفة.
+من أبرز مزايا BIM تحسين جودة التصميم، ورفع كفاءة إدارة المشروع، ودعم الاستدامة من خلال تحليل الطاقة والإضاءة والتهوية بشكل مبكر. كما تتيح التقنية استخراج جداول الكميات والتقارير تلقائياً، وتحديثها فور إجراء أي تعديل على النموذج، مما يعزز دقة البيانات وموثوقيتها.
+إن اعتماد تقنية BIM لم يعد خياراً ثانوياً في المشاريع الكبرى، بل أصبح معياراً مهنياً يعكس تطور المؤسسات الهندسية وسعيها نحو التحول الرقمي. فهي تمثل بيئة عمل تعاونية متكاملة تربط بين الفكرة والتصميم والتنفيذ والتشغيل ضمن منظومة معلوماتية واحدة.
             </p>
-            
-            <p class="article-text">
-                وهنا الفقرة الثانية... يمكنك إضافة الصور أو الفيديوهات في المنتصف.
-            </p>
-        </article>
-    </main>
+    </div>
+            <section class="references-section">
+    <h3 class="ref-title"><i class="fas fa-book"></i> المراجع والمصادر العلمية</h3>
+    <table class="ref-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>عنوان المرجع / المصدر</th>
+                <th>نوع المرجع</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Building Information Modeling (BIM): Trends and Future Directions</td>
+                <td>بحث علمي</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>دليل المعايير الهندسية لمنظمة BIM Global</td>
+                <td>كود هندسي</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>أوتوديسك: مستقبل التصميم الرقمي 2025</td>
+                <td>تقرير تقني</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>مبادئ الهندسة المدنية الحديثة - جامعة كمبريدج</td>
+                <td>كتاب أكاديمي</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>المجلة الدولية للمدن الذكية والإنشاءات</td>
+                <td>دورية علمية</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+</main>
 
-    <footer class="main-footer">
-        <p>جميع الحقوق محفوظة &copy; Engineering Guide 2026</p>
-    </footer>
+        <footer style="text-align: center; padding: 20px; background: var(--navy-dark); color: white; margin-top: 50px; font-size: 0.9em;">
+    <p>© 2026 جميع الحقوق محفوظة لموقع Engineering Guide</p>
+    <a href="../privacy.html" style="color: var(--gold); margin-left: 15px;">سياسة الخصوصية</a>
+    <a href="../disclaimer.html" style="color: var(--gold);">إخلاء المسؤولية</a>
+</footer>
 
-</body>
+    </div> </body>
 </html>
