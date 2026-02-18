@@ -1048,45 +1048,66 @@ header nav {
     background-color: #f1f1f1;
 }
 
- <h1 style="text-align: center;">مكتبة المقالات </h1>
+/* تنسيق شبكة المقالات */
+.history-library {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+    gap: 20px;
+    direction: rtl;
+    padding: 20px;
+}
 
-    <div class="history-library">
-        <div class="article-card">
-            <div class="card-image">
-                <img src="images/bim-thumbnail.png" alt="BIM Article">
-            </div>
-            <div class="card-content">
-                <h3>نمذجة معلومات المباني (BIM)</h3>
-                <p>تعرف على أحدث التقنيات في إدارة المشاريع الهندسية وتقليل الهدر الإنشائي...</p>
-                <a href="articles/bim.html" class="read-more">قراءة المقال كاملاً</a>
-            </div>
-        </div>
+/* تنسيق بطاقة المقال */
+.article-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
 
-        <div class="article-card">
-            <div class="card-image">
-                <img src="../images/struct-thumbnail.jpg" alt="Structure">
-            </div>
-            <div class="card-content">
-                <h3>التصميم الإنشائي الحديث</h3>
-                <p>دراسة حول الأنظمة الإنشائية المقاومة للزلازل في الأبراج الشاهقة...</p>
-                <a href="../articles/structural.html" class="read-more">قراءة المقال كاملاً</a>
-            </div>
-        </div>
-        
-        </div>
+.article-card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-</body>
-</html>
+/* تنسيق الصورة (الحجم المطلوب 100x66) */
+.card-image img {
+    width: 150px !important;
+    height: 250px !important;
+    object-fit: cover;
+    display: block;
+    margin: 15px auto; /* لتوسيط الصورة وإعطائها مساحة علوية */
+    transition: transform 0.4s ease;
+}
 
-<div class="pagination-container">
-  <div class="pagination">
-    <a href="#">&laquo; السابق</a>
-    <a href="history.html" class="active">1</a>
-    <a href="history-page2.html">2</a>
-    <a href="history-page3.html">3</a>
-    <a href="#">التالي &raquo;</a>
-  </div>
-</div>
+/* تأثير مرور الماوس على الصورة */
+.card-image img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* نصوص البطاقة */
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px solid #eee;
+}
+
 
 
 
