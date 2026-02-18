@@ -2,64 +2,78 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title> المقالات - Engineering Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة المقالات - Engineering Guide</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
     <style>
-        /* كود الشبكة (Grid) */
+        /* سأضع هنا التنسيقات الضرورية جداً لضمان عدم حدوث تضارب */
         .history-library {
             display: grid;
-            /* إنشاء 3 أعمدة متساوية */
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 25px; /* المسافة بين المقالات */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
             padding: 20px;
-            font-family: Arial, sans-serif;
         }
 
-        .article-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
+        /* تنسيق الصورة المطلوب 150x250 */
         .card-image img {
-            width: 100%;
-            height: 180px;
+            width: 150px !important;
+            height: 250px !important;
             object-fit: cover;
-        }
-
-        .card-content {
-            padding: 15px;
-            flex-grow: 1;
-        }
-
-        .card-content h3 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-
-        .read-more {
             display: block;
-            margin-top: 15px;
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-            border-top: 1px solid #eee;
-            padding-top: 10px;
+            margin: 15px auto;
+            transition: transform 0.4s ease;
         }
 
-        /* لجعلها متوافقة مع الجوال (تتحول لعمود واحد عند صغر الشاشة) */
+        .card-image img:hover {
+            transform: scale(1.1);
+        }
+
         @media (max-width: 800px) {
             .history-library {
                 grid-template-columns: 1fr;
             }
         }
     </style>
-     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-   
-  
+    <h1 style="text-align: center; margin-top: 30px;">مكتبة المقالات الهندسية</h1>
+
+    <div class="history-library">
+        
+        <div class="article-card">
+            <div class="card-image">
+                <img src="images/bim-thumbnail.jpg" alt="BIM Article">
+            </div>
+            <div class="card-content">
+                <h3>نمذجة معلومات المباني (BIM)</h3>
+                <p>تعرف على أحدث التقنيات في إدارة المشاريع الهندسية وتقليل الهدر الإنشائي...</p>
+                <a href="articles/bim.html" class="read-more">قراءة المقال كاملاً</a>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-image">
+                <img src="images/struct-thumbnail.jpg" alt="Structure">
+            </div>
+            <div class="card-content">
+                <h3>التصميم الإنشائي الحديث</h3>
+                <p>دراسة حول الأنظمة الإنشائية المقاومة للزلازل في الأبراج الشاهقة...</p>
+                <a href="articles/structural.html" class="read-more">قراءة المقال كاملاً</a>
+            </div>
+        </div>
+
+        </div>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <div class="pagination">
+            <a href="#" style="padding: 10px; border: 1px solid #ddd; text-decoration: none; color: #333;">&laquo; السابق</a>
+            <a href="#" class="active" style="padding: 10px; border: 1px solid #3498db; background: #3498db; color: white; text-decoration: none;">1</a>
+            <a href="#" style="padding: 10px; border: 1px solid #ddd; text-decoration: none; color: #333;">التالي &raquo;</a>
+        </div>
+    </div>
+
+</body>
+</html>
