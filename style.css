@@ -1114,9 +1114,12 @@ header nav {
     border-top: 1px solid #eee;
 }
 
-body:not([class*="index"]) {
+
+/* استهداف جميع الصفحات ما عدا الرئيسية */
+body:not([class*="home"]) {
     padding-top: 40px;
 }
+
 
 
 
