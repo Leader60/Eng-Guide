@@ -808,20 +808,20 @@ header nav {
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 600;
-    border-right: 4px solid #ffd300; /* لمسة هندسية: خط ذهبي جانبي */
+    border-right: 4px solid #d4af37; /* لمسة هندسية: خط ذهبي جانبي */
     padding-right: 15px;
     
     /* إضافة خط سفلي بنفس لون الكتابة */
-    border-bottom: 2px solid currentColor;  /* currentColor = #ffd300 */
+    border-bottom: 2px solid currentColor;  /* currentColor = #d4af37 */
     padding-bottom: 10px;  /* مسافة بين النص والخط السفلي */
     display: inline-block;  /* لكي يأخذ الخط عرض النص فقط */
 }
 
 /* تمييز العناوين الفرعية داخل المقال */
 .article-content h2, .article-content h3 {
-    color: #ffd300;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    color: #d4af37;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 /* تنسيق الروابط داخل المقال إن وجدت */
@@ -832,9 +832,9 @@ header nav {
 
 /* التأكد من أن العنوان الرئيسي ذهبي أيضاً */
 .page-title {
-    color: #ffd300;
+    color: #d4af37;
     text-align: right;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin-bottom: 20px;
 }
 
@@ -1113,6 +1113,7 @@ header nav {
     padding-top: 5px;
     border-top: 1px solid #eee;
 }
+
 
 
 
