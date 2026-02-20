@@ -1116,9 +1116,10 @@ header nav {
 
 
 /* استهداف جميع الصفحات ما عدا الرئيسية */
-body:not([class*="home"]) {
+body:not([class*="idex.html"]) {
     padding-top: 40px;
 }
+
 
 
 
